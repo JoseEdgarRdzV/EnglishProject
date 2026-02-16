@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 248, 220);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(160, 82, 45);
+    display: flex;
+}
+
+.menu li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.tarjeta {
+    flex: 50%;
+    margin: 10px;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta .contenido {
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 10px;
+}
+
+
+.tarjetas {
+    display: flex;
+}
+
+
+/*
+.menu li a.active {
+    background-color: #555;
+    color: white;
+}
+*/
