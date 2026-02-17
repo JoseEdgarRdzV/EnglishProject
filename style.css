@@ -1,9 +1,22 @@
-body {
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box; 
+}
+
+
+
+body {
+    width: 100%;
+    padding: 0px;
+    height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */;
+    justify-content: center;
+    align-items: center; /* Centra el contenido verticalmente */
     background-color: rgb(255, 248, 220);
     font-family: 'Times New Roman', Times, serif;
 }
+
+
 
 .menu ul {
     list-style-type: none;
@@ -26,29 +39,90 @@ body {
     color: white;
 }
 
-.tarjeta {
-    flex: 50%;
-    margin: 10px;
-    border: 5px solid black;
-    display: flex;
-    flex-direction: column;
-}
-
-.tarjeta .contenido {
-    flex-grow: 1;
-    flex-shrink: 1;
+header h1 {
     padding: 10px;
 }
 
-
-.tarjetas {
+.informacion {
+    padding: 20px;
     display: flex;
 }
 
+.informacion img {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+}
 
-/*
-.menu li a.active {
-    background-color: #555;
+.tarjetas {
+    width: 100%; 
+    display: flex;          
+    flex-direction: row;      
+    justify-content: center;  
+    align-items: stretch;     /* Hace que todas las tarjetas tengan la misma altura */
+    gap: 20px;               /* Espacio de separación entre tarjetas *//* Limita el ancho máximo del contenedor de tarjetas */
+}
+
+
+.tarjeta {
+    width: 75%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden; /* Asegura que el contenido no se desborde del borde redondeado */
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil para dar profundidad */
+    cursor: default;
+    transition: all 400ms ease; /* Agrega una transición suave para el efecto hover */
+}
+
+.tarjeta:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4); /* Aumenta la sombra al hacer hover para dar un efecto de elevación */
+    transform: translateY(-3%); /* Eleva ligeramente la tarjeta al hacer hover */
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 210px;
+}
+
+.tarjeta .contenido {
+    padding: 15px;
+    text-align: center;
+}
+
+.tarjeta .contenido p {
+    line-height: 1.5;
+    color: black;
+}
+
+.tarjeta .contenido h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.tarjeta .contenido button {
+    border: none; 
+    color: black; 
+    padding: 14px 28px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    background-color: white;
+    border:2px solid black;
+    margin-top: 10px;
+    transition: all 400ms ease;
+}
+
+.tarjeta .contenido button:hover {
+    background-color: black;
     color: white;
 }
-*/
+
+.preguntas {
+    padding: 20px;
+}
+
+footer {
+    padding: 20px;
+}
+
