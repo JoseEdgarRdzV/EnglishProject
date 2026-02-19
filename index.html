@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EnglishProject</title>
     <link rel="stylesheet" href="style.css">
+    <script src="/script.js" defer></script>
     <link rel="icon" type="images/jpg" href="/img/Logo/LogoFish.jpg">
 
 </head>
@@ -22,7 +23,28 @@
                     <li><a href="#">Ejercicios</a></li>
                 </ul>
             </nav>
-            <a href="" class="contacto">Contacto</a>
+
+            
+            <button class="abrir_formulario">Registrar Usuario</button>
+
+            <dialog id="registro_usuario">
+                <h2>¿Te gustaria registrar a un alumno nuevo?</h2>
+                <form id="formulario" method="dialog">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe el nombre del Alumno" required><br><br>
+
+                    <label for="motivo">¿Que le motiva a aprender ingles?</label>
+                    <input type="text" id="motivo" name="motivo" placeholder="Escribir el motivo..." required>
+
+                    <div class="botones_formulario">
+                        <button type="submit" id="guardar_alumno">Guardar Alumno</button>
+                        <button type="button" id="cerrar_formulario">Cancelar</button>
+                    </div>
+                </form>
+
+            </dialog>
+            
+
         </header>
 
         <h1>Bienvenido a tu curso de Ingles</h1>
